@@ -16,6 +16,7 @@ body, html {
   
   #left {
     width: 100%;
+    height:100%;
     display: flex;
     justify-content:center;
     align-items:center;
@@ -28,35 +29,36 @@ body, html {
   }
   
   #t-shirt {
-    /* background-color:#FF4858; */
     position:relative;
     display:flex;
     align-items: center;
     justify-content: center;
-    width:80%;
-    height:80%;
+    width:100%;
+    height:100%;
   }
   
   #canvas-container {
     z-index:1000;
     position:absolute;
-    top: 23%; left: 29%;
-    width:40%;
-    /* height:50%; */
     border: 1px solid black;
+    width:35%;
   }
-  
+ 
+  #relative-size {
+    position:relative;
+    max-height:100%;
+    max-width:100%;
+    height:auto;
+    width:auto; 
+  }
 
-  #t-shirt > img {
+  #relative-size > img {
+    position:relative;
+    max-width:100%;
     max-height:100%;
     height:auto;
-    max-width:100%;
     width:auto;
     background-color:#FF4858;
-    /* object-fit: contain;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); */
   }
 
   /*

@@ -1,9 +1,9 @@
 
+
 let sceneWidth = document.getElementById("canvas-container").offsetWidth;
 // Height must be 3:4 of width
 let sceneHeight = (sceneWidth * 4) / 3;
 document.getElementById("canvas-container").style.height = sceneHeight;
-
 
 /**
  * KonvaJS
@@ -12,7 +12,8 @@ document.getElementById("canvas-container").style.height = sceneHeight;
 // Set the stage 
 var stage = new Konva.Stage({
     container: 'canvas',
-    // first just set set as is
+    // Set initial width and height based on
+    // value of input
     width: sceneWidth,
     height: sceneHeight,
 });
@@ -63,6 +64,7 @@ window.addEventListener('resize', fitStageIntoParentContainer);
 function fitStageIntoParentContainer() {
 
     var container = document.querySelector('#canvas-container');
+
     
     // Set height to 4:3
     const pixelWidth = container.offsetWidth;
