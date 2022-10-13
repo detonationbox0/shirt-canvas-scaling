@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Easy UI Boilerplate -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>T-Shirt Canvas Scaling</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <!-- Canvas Statistics -->
+        <div id="canvas-stats">
+            <div class="control">
+                <label for="cw">Canvas Width:</label>
+                <input type="text" id="cw" class="u-full-width" disabled />
+            </div>
+            <div class="control">
+                <label for="ch">Canvas Height:</label>
+                <input type="text" id="ch" class="u-full-width" disabled />
+            </div>
+            <div class="control">
+                <label for="cx">Canvas Scale (x):</label>
+                <input type="text" id="cx" class="u-full-width" disabled />
+            </div>
+            <div class="control">
+                <label for="cy">Canvas Scale (y):</label>
+                <input type="text" id="cy" class="u-full-width" disabled />
+            </div>
+        </div>
+
+        <!-- T-Shirt Container -->
+        <div id="left">
+            <div id="t-shirt">
+                <div id="canvas-container">
+                    <div id="canvas"></div>
+                </div>
+                <img id="s" src="https://portal.themailshark.net/franchisepromoF/Apparels/Apparel_front_12_370_319.png">
+
+                <!-- <div id="img-bg">
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div id="right">
+            <div id="controls">
+                
+                <div class="control">
+                    <label for="w">Width as a % of parent</label>
+                    <input type="number" id="w" onChange="w()"
+                                class="u-full-width" value="40" step=".5"
+                                    autocomplete="off" />
+                </div>
+                <div class="control">
+                    <label for="x">x as a % of parent</label>
+                    <input type="number" id="x" onChange="x()" class="u-full-width"
+                                value="29" step=".5"
+                                    autocomplete="off"/>
+                </div>
+                <div class="control">
+                    <label for="y">y as a % of parent</label>
+                    <input type="number" id="y" onChange="y()" class="u-full-width"
+                            value="23" step=".5"
+                                autocomplete="off"/>
+                </div>
+                <div class="control">
+                    <label for="c">Color</label>
+                    <input value="#FF4858" id="c" onChange="c()"
+                            data-jscolor="{}" class="u-full-width"
+                                autocomplete="off">
+                </div>
+                <div class="control">
+                    <label for="t">Shirt Image</label>
+                    <select id="t" onchange="t()">
+                        <option value="Apparel_front_12_370_319.png" selected>Polo</option>
+                        <option value="Apparel_front_12_366_315.png">Hoodie</option>
+                        <option value="Apparel_front_12_356_305.png">T-Shirt</option>
+                        <option value="Apparel_front_12_363_312.png">Long Sleeve Shirt</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <!-- So there's no delay going between them -->
+        <img src="https://portal.themailshark.net/franchisepromoF/Apparels/Apparel_front_12_366_315.png" />
+        <img src="https://portal.themailshark.net/franchisepromoF/Apparels/Apparel_front_12_356_305.png" />
+        <img src="https://portal.themailshark.net/franchisepromoF/Apparels/Apparel_front_12_363_312.png" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/konva/8.3.13/konva.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.5.0/jscolor.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

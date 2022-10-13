@@ -1,0 +1,94 @@
+body, html {
+    width:100%;
+    height:100%;
+    padding:0px;
+    margin:0px;
+  }
+  #container {
+    width:100%;
+    height:100%;
+    display:flex;
+  }
+  
+  #left, #right {
+    height:100%;
+  }
+  
+  #left {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  #right {
+    /* flex:1; */
+    min-width:300px;
+    background-color:#EEE;
+  }
+  
+  #t-shirt {
+    /* background-color:#FF4858; */
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    height:80%;
+  }
+  
+  #canvas-container {
+    z-index:1000;
+    position:absolute;
+    top: 23%; left: 29%;
+    width:40%;
+    /* height:50%; */
+    border: 1px solid black;
+  }
+  
+
+  #t-shirt > img {
+    max-height:100%;
+    height:auto;
+    max-width:100%;
+    width:auto;
+    background-color:#FF4858;
+    /* object-fit: contain;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+  }
+
+  /*
+  Canvas Statistics
+  */
+  #canvas-stats {
+    z-index:1000;
+    background-color:rgba(255,255,255,.8);
+    position:absolute;
+    /* width:300px; */
+
+  }
+  
+  /*
+  Control Area:
+  */
+  #right {
+    z-index:1000;
+    display:flex;
+    justify-content:center;
+  }
+  #controls {
+  /*   position:absolute; */
+    width:100%;
+    z-index:1000;
+    margin:20px;
+  }
+  
+  .control {
+    margin:20px;
+  }
+  
+  .control > input {
+    /* width:100px; */
+  }
